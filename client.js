@@ -1335,7 +1335,7 @@ var caminho2 = "M122.405937,242.241241 "
 
 
         
-            
+      
 
             //linha dos x
             svg.append('line')
@@ -1637,6 +1637,15 @@ var caminho2 = "M122.405937,242.241241 "
                 svg.select("#overall5").remove()
 
                 //legenda quadrados e circulos
+                svg.append('text')
+                .attr('id', 'overalla')
+                .text("Legenda")
+                .attr('x', 50)
+                .attr('y', 475)
+                .style("fill", "#6E9EA4")
+                .style("font-weight", 800)
+                .style("font-family", "Roboto")
+                .style("font-size", '20px')
                 
                 svg.append('circle')
                 .attr('id', 'overallb')
