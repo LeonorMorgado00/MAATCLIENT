@@ -761,7 +761,6 @@ var caminho2 = "M122.405937,242.241241 "
 
             //BOTAO Para obter o identificador numerário
             d3.select("#identificadorNumerario").on("change", function(){
-                console.log('FUNÇÃO QUE ATUALIZA O IDENTIFICADOR INICIAL')
 
                 // GRAFICO WELL BEING
 
@@ -813,7 +812,6 @@ var caminho2 = "M122.405937,242.241241 "
 
                 //NOVO ID
                 identificadorNumerario = this.value
-                console.log('identificadorNumerario: ' + identificadorNumerario)
 
                 var indexToGet
 
@@ -828,13 +826,10 @@ var caminho2 = "M122.405937,242.241241 "
                         }
                     }
                 }
-                console.log(indexToGet)
   
     
                 //VERIFICAR SE O USER EXISTE
                 if (usedIds.includes(identificadorNumerario)){
-                    console.log('o user existe')
-
                     
                     idToConsider = identificadorNumerario
                     
@@ -1159,7 +1154,6 @@ var caminho2 = "M122.405937,242.241241 "
                     colorir();
                 }
                 else{
-                    console.log('ID NÃO EXISTE')
                     //APAGAR GRAFICO AO LONGO DO TEMPO
                     d3.select("#circle1").remove()
                     d3.select("#circle2").remove()
@@ -1292,7 +1286,6 @@ var caminho2 = "M122.405937,242.241241 "
                         //idToConsider = null
                         //deselect as outras
                         if(!d3.select("#ultima").classed("selected")){
-                            console.log('A')
                             d3.select("#ultima").classed("selected", true)
                             d3.select("#ultima")
                                 .style('fill', "#6E9EA4")  
@@ -1304,7 +1297,6 @@ var caminho2 = "M122.405937,242.241241 "
                         }
                         if (!d3.select(this).classed("selected") ){
 
-                            console.log('??')
                             d3.select(this).classed("selected", true)
                             d3.select(this)
                             .style('fill', "#0d4148")
@@ -1446,6 +1438,16 @@ var caminho2 = "M122.405937,242.241241 "
                 .style("font-family", "Roboto")
                 .style("color", "#0d4148")
 
+            svg.append('text')
+                .attr('id', 'overalla')
+                .text("Legenda")
+                .attr('x', 50)
+                .attr('y', 475)
+                .style("fill", "#6E9EA4")
+                .style("font-weight", 800)
+                .style("font-family", "Roboto")
+                .style("font-size", '20px')
+
             function drawCircleChart(){
                 svg.select("#legendaLine1").remove()
                 svg.select("#legendaLine2").remove()
@@ -1561,8 +1563,6 @@ var caminho2 = "M122.405937,242.241241 "
                     cyApos = 125;
                 }
 
-                console.log('CIRCULO ANTES')
-                console.log('colorAntes: ' + colorAntes)
     
                 //CIRCLE ANTES GERAL
                 svg.append('circle')
@@ -1638,15 +1638,7 @@ var caminho2 = "M122.405937,242.241241 "
                 svg.select("#overall5").remove()
 
                 //legenda quadrados e circulos
-                svg.append('text')
-                    .attr('id', 'overalla')
-                    .text("Legenda")
-                    .attr('x', 50)
-                    .attr('y', 475)
-                    .style("fill", "#6E9EA4")
-                    .style("font-weight", 800)
-                    .style("font-family", "Roboto")
-                .style("font-size", '20px')
+                
                 svg.append('circle')
                 .attr('id', 'overallb')
                     .attr('cx', 70)
@@ -1683,7 +1675,6 @@ var caminho2 = "M122.405937,242.241241 "
 
                 //Meter a zero
                 idToConsider = identificadorAConsiderar
-                console.log('idToConsider: ' + idToConsider)
                 if(usedIds.includes(identificadorAConsiderar)){
                     timesToPrint = []
 
