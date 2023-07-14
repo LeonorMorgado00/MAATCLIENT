@@ -1453,7 +1453,6 @@ var caminho2 = "M122.405937,242.241241 "
                 svg.select("#legendaLine2").remove()
                 svg.select("#legendaLine3").remove()
                 svg.select("#legendaLine4").remove()
-                svg.select("#overalla").remove()
                 svg.select("#overallb").remove()
                 svg.select("#overallc").remove()
                 svg.select("#overalld").remove()
